@@ -15,7 +15,8 @@ Feature: Coffee cart UI tests
     * screenshot()
  
   Scenario: API and UI test
-    * url 'https://coffee-cart.app/list.json'
+    * url baseUrl
+    * path 'list.json'
     * method get
     * def productNames = $[*].name
     * def filteredProductNames = productNames.filter(name => !name.startsWith("(Discounted)"))
@@ -39,4 +40,3 @@ Feature: Coffee cart UI tests
     * match responseStatus == 500
 
   Scenario: Mocked API and UI test
-    
