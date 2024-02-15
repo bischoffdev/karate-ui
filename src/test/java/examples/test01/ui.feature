@@ -1,16 +1,18 @@
 Feature: Coffee cart UI tests
 
   Background:
-    * configure driver = { type: 'chrome', showDriverLog: false }
+    * configure driver = { type: 'chrome' }
     * def baseUrl = 'https://coffee-cart.app/'
 
   Scenario: Pure UI test
     * driver baseUrl
     * screenshot()
     * click("[data-test='Cappuccino']")
+    * waitFor("[data-test='checkout']")
     * def checkoutButton = locate("[data-test='checkout']")
+    * def buttonText = checkoutButton.text
     * match checkoutButton.text == "Total: $19.00"
-    * click(checkoutButton)
+    * checkoutButton.click()
     * waitFor(".modal-content")
     * screenshot()
  
@@ -40,3 +42,6 @@ Feature: Coffee cart UI tests
     * match responseStatus == 500
 
   Scenario: Mocked API and UI test
+    * driver baseUrl
+    * driver.intercept({ patterns: [{ urlPattern: '*' }], mock: 'mock.feature' })
+    * screenshot()
