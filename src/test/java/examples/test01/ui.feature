@@ -6,7 +6,6 @@ Feature: Coffee cart UI tests
 
   Scenario: Pure UI test
     * driver baseUrl
-    * screenshot()
     * click("[data-test='Cappuccino']")
     * waitFor("[data-test='checkout']")
     * def checkoutButton = locate("[data-test='checkout']")
@@ -14,6 +13,7 @@ Feature: Coffee cart UI tests
     * match checkoutButton.text == "Total: $19.00"
     * checkoutButton.click()
     * waitFor(".modal-content")
+    * match text(".modal-content h1") == "Payment details"
     * screenshot()
  
   Scenario: API and UI test
@@ -42,6 +42,10 @@ Feature: Coffee cart UI tests
     * match responseStatus == 500
 
   Scenario: Mocked API and UI test
+    * driver 'about:blank'
+    * driver.intercept({ patterns: [{ urlPattern: '*/list.json' }], mock: 'mock.feature' })
     * driver baseUrl
-    * driver.intercept({ patterns: [{ urlPattern: '*' }], mock: 'mock.feature' })
+    * click("[data-test='Brewtiful_morning']")
+    * click("[data-test='Sip_happens']")
+    * match locate("[data-test='checkout']").text == "Total: $11.00"
     * screenshot()

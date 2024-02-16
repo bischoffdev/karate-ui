@@ -1,7 +1,7 @@
 [
     {
         "name": "Brewtiful morning",
-        "price": 10,
+        "price": 5,
         "recipe": [
             {
                 "name": "espresso",
@@ -11,7 +11,7 @@
     },
     {
         "name": "Sip happens",
-        "price": 12,
+        "price": 6,
         "recipe": [
             {
                 "name": "espresso",

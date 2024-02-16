@@ -1,12 +1,11 @@
 @ignore
-Feature:
+Feature: Mocking coffee products
 
 Background:
-  * configure cors = true
+    * configure cors = true
+   
+Scenario: pathMatches('/list.json') && methodIs('get')
+    * json response = read('products.json')
 
-  # pathMatches('/list.json') && methodIs('get')
 Scenario:
-    * def response = read('products.json')
-    
-#Scenario:
-#  * def responseStatus = 500
+    * def responseStatus = 500
