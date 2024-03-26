@@ -48,7 +48,7 @@ Feature: Coffee cart UI tests
     * click("[data-test='Brewtiful_morning']")
     * click("[data-test='Sip_happens']")
     * click('{}cart (2)')
-    * waitForUrl('/cart')    
+    * waitForUrl('/cart')
     * match locate("[data-test='checkout']").text == "Total: $11.00"
     * def shoppingCartEntries = locateAll("div.modal +ul li.list-item")
     * def count = shoppingCartEntries.length
