@@ -54,3 +54,10 @@ Feature: Coffee cart UI tests
     * def count = shoppingCartEntries.length
     * match count == 2
     * screenshot()
+
+  Scenario: Image comparison
+    * configure imageComparison = { mismatchShouldPass: true }
+    * driver baseUrl
+    * click("[data-test='Cappuccino']")
+    * def boughtCoffee = screenshot()
+    * compareImage { baseline: 'this:images/base.png', latest: #(boughtCoffee) }
