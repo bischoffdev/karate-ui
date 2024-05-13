@@ -1,8 +1,12 @@
 Feature: Coffee cart UI tests
 
-  Background:
-    * configure driver = { type: 'chrome' }
-    * def baseUrl = 'https://coffee-cart.app/'
+  Scenario: Pure API test
+    * url baseUrl
+    * path 'list.json'
+    * method get
+    * def productNames = $[*].name
+    * match productNames[0] == "Espresso"
+    * print productNames
 
   Scenario: Pure UI test
     * driver baseUrl
@@ -15,7 +19,7 @@ Feature: Coffee cart UI tests
     * waitFor(".modal-content")
     * match text(".modal-content h1") == "Payment details"
     * screenshot()
- 
+
   Scenario: API and UI test
     * url baseUrl
     * path 'list.json'
@@ -61,3 +65,9 @@ Feature: Coffee cart UI tests
     * click("[data-test='Cappuccino']")
     * def boughtCoffee = screenshot()
     * compareImage { baseline: 'this:images/base.png', latest: #(boughtCoffee) }
+    
+    # * def options = """
+    #   {        
+    #   }
+    # """
+    # * compareImage { baseline: 'this:images/base.png', latest: #(boughtCoffee), options: #(options) }

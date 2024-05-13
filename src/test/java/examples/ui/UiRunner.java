@@ -6,7 +6,6 @@ class UiRunner {
     
     @Karate.Test
     Karate testUi() {
-    return Karate.run("ui").relativeTo(getClass());
-    }    
-
+        return Karate.run("ui");
+    }
 }

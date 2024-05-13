@@ -1,6 +1,6 @@
 function fn() {
-  var env = karate.env;
-  var config = {
-  }
-  return config;
+
+  karate.configure('driver', { type: 'chrome' });
+  
+  return { baseUrl: 'https://coffee-cart.app/'};
 }
