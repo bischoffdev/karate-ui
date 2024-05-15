@@ -4,16 +4,16 @@ Feature: Coffee cart UI tests
     * url baseUrl
     * path 'list.json'
     * method get
-    * def productNames = $[*].name
-    * match productNames[0] == "Espresso"
-    * print productNames
+    * def products = response
+    * match products[0].name == "Espresso"
+    * def onlyTheNames = $[*].name
+    * print 'Product names', onlyTheNames
 
   Scenario: Pure UI test
+    # * configure driver = { type: 'chrome' }
     * driver baseUrl
     * click("[data-test='Cappuccino']")
-    * waitFor("[data-test='checkout']")
     * def checkoutButton = locate("[data-test='checkout']")
-    * def buttonText = checkoutButton.text
     * match checkoutButton.text == "Total: $19.00"
     * checkoutButton.click()
     * waitFor(".modal-content")
