@@ -8,4 +8,4 @@ It uses the Coffee Cart sample available here: https://github.com/jecfish/coffee
 
 To install it, use `npm install`, to run it locally, use `npm run dev`.
 
-The `baseUrl` of the local website can be updated in (karate-config)[src/test/java/karate-config].
+The `baseUrl` of the local website can be updated in [karate-config](src/test/java/karate-config.js).
