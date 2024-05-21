@@ -5,6 +5,7 @@ Feature: Coffee cart UI tests
     * path 'list.json'
     * method get
     * def products = response
+    * print products 
     * match products[0].name == "Espresso"
     * def onlyTheNames = $[*].name
     * print 'Product names', onlyTheNames
@@ -47,7 +48,7 @@ Feature: Coffee cart UI tests
 
   Scenario: Mocked API and UI test
     * driver 'about:blank'
-    * driver.intercept({ patterns: [{ urlPattern: '*/list.json' }], mock: 'mock.feature' })
+    * driver.intercept({ patterns: [{ urlPattern: '*/*.json' }], mock: 'mock.feature' })
     * driver baseUrl
     * click("[data-test='Brewtiful_morning']")
     * click("[data-test='Sip_happens']")
