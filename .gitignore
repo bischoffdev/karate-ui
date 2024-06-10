@@ -3,3 +3,4 @@ target
 .IDEA
 *.iml
 package-lock.json
+.DS_Store
