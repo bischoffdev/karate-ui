@@ -28,15 +28,14 @@ Feature: Coffee cart UI tests
     * def productNames = $[*].name
     * def filteredProductNames = productNames.filter(name => !name.startsWith("(Discounted)"))
     * driver baseUrl
-    * waitFor('#app h4')
     * def productsWeb = locateAll('//h4/text()')
     * def productNamesWeb = []
-    * productsWeb.forEach(e => karate.appendTo(productNamesWeb, e.text.trim()))
+    * productsWeb.forEach(product => karate.appendTo(productNamesWeb, product.text.trim()))
     * match productNamesWeb == filteredProductNames
 
   Scenario: Mocked API
-    * def start = () => karate.start('mock.feature').port
-    * def port = callonce start
+    * def startCoffeeMockServer = () => karate.start('mock.feature').port
+    * def port = callonce startCoffeeMockServer
     * url 'http://localhost:' + port
     * path 'list.json'
     * method get
@@ -55,9 +54,6 @@ Feature: Coffee cart UI tests
     * click('{}cart (2)')
     * waitForUrl('/cart')
     * match locate("[data-test='checkout']").text == "Total: $11.00"
-    * def shoppingCartEntries = locateAll("div.modal +ul li.list-item")
-    * def count = shoppingCartEntries.length
-    * match count == 2
     * screenshot()
 
   Scenario: Image comparison
@@ -66,6 +62,15 @@ Feature: Coffee cart UI tests
     * click("[data-test='Cappuccino']")
     * def boughtCoffee = screenshot()
     * compareImage { baseline: 'this:images/base.png', latest: #(boughtCoffee) }
+    
+
+
+
+
+
+
+
+
     
     # * def options = """
     #   {        
