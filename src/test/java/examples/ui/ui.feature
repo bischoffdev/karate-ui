@@ -11,7 +11,7 @@ Feature: Coffee cart UI tests
     * print 'Product names', onlyTheNames
 
   Scenario: Pure UI test
-    # * configure driver = { type: 'chrome' }
+    * configure driver = { type: 'chrome' }
     * driver baseUrl
     * click("[data-test='Cappuccino']")
     * def checkoutButton = locate("[data-test='checkout']")
@@ -77,3 +77,5 @@ Feature: Coffee cart UI tests
     #   }
     # """
     # * compareImage { baseline: 'this:images/base.png', latest: #(boughtCoffee), options: #(options) }
+
+    # * submit().click('{}cart (2)')
