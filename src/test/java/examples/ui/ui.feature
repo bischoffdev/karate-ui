@@ -79,3 +79,5 @@ Feature: Coffee cart UI tests
     # * compareImage { baseline: 'this:images/base.png', latest: #(boughtCoffee), options: #(options) }
 
     # * submit().click('{}cart (2)')
+
+    # * delay(10000)
