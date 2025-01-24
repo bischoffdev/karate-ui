@@ -1,6 +1,6 @@
-# Karate UI - The hidden beauty
+# Karate sample tests
 
-These are the example files for the presentation "Karate UI - The hidden beauty".
+These are the example Karate tests.
 
 ## Usage
 
