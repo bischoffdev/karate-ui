@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
  
     <groupId>blog.softwaretester</groupId>
-    <artifactId>karate-ui</artifactId>
+    <artifactId>karate-beyond-api</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
  
