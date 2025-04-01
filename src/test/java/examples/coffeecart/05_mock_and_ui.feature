@@ -5,6 +5,7 @@
     * driver 'about:blank'
     * driver.intercept({ patterns: [{ urlPattern: '*/*.json' }], mock: 'mock.feature' })
     * driver baseUrl
+    * screenshot()    
     * click("[data-test='Brewtiful_morning']")
     * click("[data-test='Sip_happens']")
     * click('{}cart (2)')
