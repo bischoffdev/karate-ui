@@ -1,4 +1,3 @@
-
 Feature: Coffee cart UI
 
 Scenario: Pure UI test

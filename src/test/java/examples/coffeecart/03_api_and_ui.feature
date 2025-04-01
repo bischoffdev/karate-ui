@@ -6,6 +6,7 @@ Scenario: API and UI test
     * method get
     * def productNames = $[*].name
     * def filteredProductNames = productNames.filter(name => !name.startsWith("(Discounted)"))
+    * configure driver = { type: 'chrome' }
     * driver baseUrl
     * def productsWeb = locateAll('//h4/text()')
     * def productNamesWeb = []
