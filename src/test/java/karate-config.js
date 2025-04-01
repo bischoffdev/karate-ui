@@ -3,6 +3,3 @@ function fn() {
     baseUrl: 'https://coffee-cart.app/'
   };
 }
-
-
-// local execution: 'http://localhost:5173/'    
