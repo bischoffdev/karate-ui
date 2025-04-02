@@ -1,13 +1,30 @@
-[{
-    "name": "Brewtiful morning", "price": 5,
-    "recipe": [
-        { "name": "espresso",  "quantity": 50 },            
-        { "name": "steamed cream", "quantity": 30 }
-    ]
-}, {
-    "name": "Sip happens", "price": 6,
-    "recipe": [
-        { "name": "espresso", "quantity": 50 },
-        { "name": "almond milk", "quantity": 50 }
-    ]
-}]
+[
+    {
+        "name": "Brewtiful morning",
+        "price": 5,
+        "recipe": [
+            {
+                "name": "espresso",
+                "quantity": 50
+            },
+            {
+                "name": "steamed cream",
+                "quantity": 30
+            }
+        ]
+    },
+    {
+        "name": "Sip happens",
+        "price": 6,
+        "recipe": [
+            {
+                "name": "espresso",
+                "quantity": 50
+            },
+            {
+                "name": "almond milk",
+                "quantity": 50
+            }
+        ]
+    }
+]
