@@ -13,8 +13,6 @@ public class ApiPerformance extends Simulation {
     ScenarioBuilder main = scenario("main")
         .exec(karateFeature(
             "classpath:examples/coffeecart/01_api.feature"));
-    setUp(main.injectOpen(
-        rampUsers(100)
-            .during(20)));
+    setUp(main.injectOpen(rampUsers(100).during(10)));
   }
 }
