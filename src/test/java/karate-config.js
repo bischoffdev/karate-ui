@@ -1,5 +1,5 @@
 function fn() {
   return {
-    baseUrl: 'https://coffee-cart.app/' // 'http://localhost:5173/'
+    baseUrl: 'http://localhost:5173/'
   };
 }
