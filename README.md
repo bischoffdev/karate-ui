@@ -1,6 +1,14 @@
 # Karate sample tests
 
-These are the example Karate tests.
+These are example Karate tests for
+
+- API test
+- UI test</li>
+- Combined API and UI test
+- API mock
+- Mocked API and UI test
+- Visual test
+- Performance test
 
 ## Usage
 
