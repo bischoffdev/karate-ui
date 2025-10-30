@@ -1,9 +1,9 @@
 # Karate sample tests
 
-These are example Karate tests for
+This is the example code from my presentation "Karate - beyond API testing" showcasing
 
 - API test
-- UI test</li>
+- UI test
 - Combined API and UI test
 - API mock
 - Mocked API and UI test
