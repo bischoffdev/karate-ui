@@ -12,7 +12,7 @@
         <java.version>17</java.version>
         <maven.compiler.version>3.13.0</maven.compiler.version>
         <maven.surefire.version>3.5.2</maven.surefire.version>        
-        <karate.version>1.5.1</karate.version>
+        <karate.version>1.5.2</karate.version>
         <maven.compiler.release>17</maven.compiler.release>
         <gatling.plugin.version>4.16.2</gatling.plugin.version>
     </properties>    
